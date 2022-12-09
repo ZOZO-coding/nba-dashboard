@@ -1,15 +1,17 @@
 package com.yuzuo.nbadashboard.controller;
 
+import com.yuzuo.nbadashboard.model.Match;
 import com.yuzuo.nbadashboard.model.Team;
 import com.yuzuo.nbadashboard.repository.MatchRepository;
 import com.yuzuo.nbadashboard.repository.TeamRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.awt.print.Pageable;
+import java.time.LocalDate;
+import java.util.List;
 
 @RestController
+@CrossOrigin
 public class TeamController {
 
     private TeamRepository teamRepository;
@@ -26,6 +28,21 @@ public class TeamController {
 
         team.setMatches(matchRepository.findLatestMatchesByTeam(teamName, 4));
         return team;
+    }
+
+    @GetMapping("/team/{teamName}/matches")
+    public List<Match> getMatchesForTeam(@PathVariable String teamName, @RequestParam int year) {
+        LocalDate startDate = LocalDate.of(year, 1, 1);
+        LocalDate endDate = LocalDate.of(year + 1, 1, 1);
+
+//        return this.matchRepository.getByHomeTeamAndGameDateBetweenOrVisitorTeamAndGameDateBetween(
+//                teamName, startDate, endDate,
+//                teamName, startDate, endDate
+//        );
+
+        return this.matchRepository.getMatchesByTeamBetweenDates(
+                teamName, startDate, endDate
+        );
     }
 
 }
