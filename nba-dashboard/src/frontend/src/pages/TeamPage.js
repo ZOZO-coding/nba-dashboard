@@ -1,6 +1,7 @@
 import './TeamPage.scss';
 
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 
 import MatchDetailCard from '../components/MatchDetailCard'
@@ -55,7 +56,9 @@ const TeamPage = () => {
             ))}
 
             <div className='more-link'>
-                <a href="#">More</a>
+                <Link to={`/team/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>
+                    More Game Stats
+                </Link>
             </div>
 
         </div>
