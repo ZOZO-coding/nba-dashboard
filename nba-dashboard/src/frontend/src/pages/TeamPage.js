@@ -17,12 +17,12 @@ const TeamPage = () => {
 
     useEffect(
         () => {
-            const fetchMatches = async () => {
+            const fetchTeam = async () => {
                 const response = await fetch(`http://localhost:8080/team/${teamName}`);
                 const data = await response.json();
                 setTeam(data);
             };
-            fetchMatches();
+            fetchTeam();
 
         }, [teamName]
     );
@@ -59,6 +59,7 @@ const TeamPage = () => {
                 <Link to={`/team/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>
                     More Game Stats
                 </Link>
+                <p><Link to='/'>HomePage</Link></p>
             </div>
 
         </div>

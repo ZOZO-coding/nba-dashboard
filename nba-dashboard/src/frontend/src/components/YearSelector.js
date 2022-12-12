@@ -15,11 +15,14 @@ const YearSelector = ({ teamName }) => {
         <ol className='years-selector'>
             <h3>Select A Year</h3>
             {years.map(year => (
-            <li>
-                <Link to={`/team/${teamName}/matches/${year}`}>{year}</Link>
-            </li>
+                <li>
+                    <Link to={`/team/${teamName}/matches/${year}`}>{year}</Link>
+                </li>
             ))}
-            <Link to={`/team/${teamName}`}>Back to Team</Link>
+            <div className='direct-options'>
+                <p><Link to={`/team/${teamName}`}>Back to Team</Link></p>
+                <p><Link to='/'>HomePage</Link></p>
+            </div>
         </ol>
     )
 }
