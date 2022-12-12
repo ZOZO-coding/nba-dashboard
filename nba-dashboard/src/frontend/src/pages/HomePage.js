@@ -11,7 +11,7 @@ const HomePage = () => {
     useEffect(
         () => {
             const fetchAllTeams = async () => {
-                const response = await fetch(`http://localhost:8080/team`);
+                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/team`);
                 const data = await response.json();
                 setTeams(data);
             };
@@ -27,7 +27,7 @@ const HomePage = () => {
             </div>
 
             <div className='team-grid'>
-                { teams.map(team => <TeamTile teamName={team.teamName}/>)}
+                { teams.map((team, i) => <TeamTile teamName={team.teamName} key={i}/>)}
             </div>
 
         </div>

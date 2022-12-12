@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 const MatchDetailCard = ({ match, teamName }) => {
     if (!match) return null;
 
+    function round(x) {
+        return Number.parseFloat(x).toFixed(2);
+    }
+
     const otherTeam = match.homeTeam === teamName ? match.visitorTeam : match.homeTeam;
     const location = match.homeTeam.split(" ")[0];
     const otherTeamRoute = `/team/${otherTeam}`;
@@ -20,13 +24,13 @@ const MatchDetailCard = ({ match, teamName }) => {
             </div>
             <div className='game-stats'>
                 <h3>Home Team Field Goal %</h3>
-                <p>{match.fgPctHome}</p>
+                <p>{round(match.fgPctHome * 100)}%</p>
                 <h3>Home Team Total Assist</h3>
                 <p>{match.astHome}</p>
                 <h3>Home Team Total Rebound</h3>
                 <p>{match.rebHome}</p>
                 <h3>Visitor Team Field Goal %</h3>
-                <p>{match.fgPctAway}</p>
+                <p>{round(match.fgPctAway * 100)}%</p>
                 <h3>Visitor Team Total Assist</h3>
                 <p>{match.astAway}</p>
                 <h3>Visitor Team Total Rebound</h3>
