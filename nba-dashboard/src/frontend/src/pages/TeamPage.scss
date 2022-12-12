@@ -1,7 +1,7 @@
 .TeamPage {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr;
     row-gap: 10px;
     column-gap: 10px;
 
@@ -20,6 +20,11 @@
         justify-self: center;
         text-align: center;
         padding: 40px;
+
+        p {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
     }
 
     .match-detail-section {
@@ -30,6 +35,16 @@
         align-self: center;
         justify-self: center;
         font-size: 1.5rem;
+
+        p {
+            margin-bottom: 15px;
+            padding: 5px;
+
+            :hover {
+                background-color: #808080;
+                color: black;
+            }
+        }
     }
 }
 

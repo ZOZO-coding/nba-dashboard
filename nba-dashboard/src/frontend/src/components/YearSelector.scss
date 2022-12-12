@@ -1,11 +1,24 @@
 .years-selector {
+    font-size: 1.25rem;
     text-align: right;
     list-style: none;
+    position: sticky;
+    top: 20px;
     li {
         margin: 10px 0;
     }
 
     .direct-options {
         margin-top: 50px;
+
+        p {
+            margin-bottom: 15px;
+            padding: 5px;
+
+            :hover {
+                background-color: #808080;
+                color: black;
+            }
+        }
     }
 }

@@ -6,14 +6,19 @@ import { useParams } from 'react-router-dom'
 
 import MatchDetailCard from '../components/MatchDetailCard'
 import MatchSmallCard from '../components/MatchSmallCard'
-
-import { PieChart } from 'react-minimal-pie-chart';
+import PieChartComponent from '../components/PieChartComponent';
 
 const TeamPage = () => {
 
     const [team, setTeam] = useState({ matches: [] });
 
     const { teamName } = useParams();
+
+    let logoName = teamName.replace(/ /g, "_");
+
+    function round(x) {
+        return Number.parseFloat(x).toFixed(2);
+    }
 
     useEffect(
         () => {
@@ -34,36 +39,36 @@ const TeamPage = () => {
         <div className='TeamPage'>
             {/* row 1 */}
             <div className='team-name-section'>
+                <img src={require(`../logoImage/${logoName}.png`)} height={175} alt={logoName} />
                 <h1 className='team-name'>{team.teamName}</h1>
             </div>
 
             <div className='win-loss-section'>
-                Wins / Losses
-                <PieChart
-                    data={[
-                        { title: 'Lossess', value: team.totalMatches - team.totalWins, color: '#c93030' },
-                        { title: 'Wins', value: team.totalWins, color: '#3CB371' },
-                    ]}
-                />
+                <p>Winning Rate (from 2014 - 2022): {round(team.totalWins/team.totalMatches * 100)}%</p>
+                <PieChartComponent team={team} />
             </div>
 
             {/* row 2 */}
             <div className='match-detail-section'>
-                <h3>Latest Matches</h3>
+                <h2>Latest Matches</h2>
                 <MatchDetailCard match={team.matches[0]} teamName={team.teamName} />
             </div>
-            
+
             {/* row 3 */}
+
             {team.matches.slice(1).map(match => (
                 <MatchSmallCard match={match} teamName={team.teamName} key={match.gameId} />
             ))}
 
             <div className='more-link'>
-                <Link to={`/team/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>
-                    More Game Stats
-                </Link>
-                <p><Link to='/'>HomePage</Link></p>
+                <p>
+                    <Link to={`/team/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>
+                        More Game Stats
+                    </Link>
+                </p>
+                <p><Link to='/'>Back to HomePage</Link></p>
             </div>
+
 
         </div>
     )
