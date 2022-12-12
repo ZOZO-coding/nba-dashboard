@@ -1,3 +1,5 @@
+import './App.scss';
+
 import TeamPage from "./pages/TeamPage";
 import MatchPage from "./pages/MatchPage";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

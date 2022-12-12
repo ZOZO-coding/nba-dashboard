@@ -1,0 +1,25 @@
+.MatchDetailCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    .game-date {
+        margin-top: 10px;
+    }
+
+    .game-location {
+        margin-top: 10px;
+    }
+
+    .game-result {
+        margin-top: 10px;
+    }
+
+    .game-stats {
+        text-align: right;
+        & > p {
+            margin-bottom: 10px;
+        }
+    }
+}
