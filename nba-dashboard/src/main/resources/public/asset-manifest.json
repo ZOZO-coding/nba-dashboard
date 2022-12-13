@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b2989ac5.css",
+    "main.js": "/static/js/main.88821b1b.js",
+    "static/media/Philadelphia_76ers.png": "/static/media/Philadelphia_76ers.7ed20cf68fa0cff16fca.png",
+    "static/media/New_Orleans_Pelicans.png": "/static/media/New_Orleans_Pelicans.83228ba23363ef0dfff6.png",
+    "static/media/Washington_Wizards.png": "/static/media/Washington_Wizards.bae5c3f7c7f8e164395f.png",
+    "static/media/Dallas_Mavericks.png": "/static/media/Dallas_Mavericks.d24b5c1c5e53c7ea13cf.png",
+    "static/media/Boston_Celtics.png": "/static/media/Boston_Celtics.c9d7fd3b31339161a42b.png",
+    "static/media/Sacramento_Kings.png": "/static/media/Sacramento_Kings.2baa7af1269510735b39.png",
+    "static/media/Milwaukee_Bucks.png": "/static/media/Milwaukee_Bucks.ed00e7ef3c7c0ca2c36c.png",
+    "static/media/Atlanta_Hawks.png": "/static/media/Atlanta_Hawks.d411a98fe877368e564c.png",
+    "static/media/Golden_State_Warriors.png": "/static/media/Golden_State_Warriors.1be0cf77f7c28769f3a8.png",
+    "static/media/Phoenix_Suns.png": "/static/media/Phoenix_Suns.d2a6c8cb869894d5ef89.png",
+    "static/media/Orlando_Magic.png": "/static/media/Orlando_Magic.09ef3d6a3d7eeba4b197.png",
+    "static/media/Charlotte_Hornets.png": "/static/media/Charlotte_Hornets.8662527d1556766530d5.png",
+    "static/media/Minnesota_Timberwolves.png": "/static/media/Minnesota_Timberwolves.f10647f63f94aa5f12ce.png",
+    "static/media/Detroit_Pistons.png": "/static/media/Detroit_Pistons.f63e990cc9074b18f4af.png",
+    "static/media/Cleveland_Cavaliers.png": "/static/media/Cleveland_Cavaliers.64139fbea8ca496282a8.png",
+    "static/media/Toronto_Raptors.png": "/static/media/Toronto_Raptors.37b9fb8cbf315efa7312.png",
+    "static/media/Utah_Jazz.png": "/static/media/Utah_Jazz.692571d52c482f0c083b.png",
+    "static/media/Oklahoma_City_Thunder.png": "/static/media/Oklahoma_City_Thunder.8470b73870628cc90a6d.png",
+    "static/media/San_Antonio_Spurs.png": "/static/media/San_Antonio_Spurs.4e8b684fff929cd381fb.png",
+    "static/media/Portland_Trail_Blazers.png": "/static/media/Portland_Trail_Blazers.18d2890133a8312df984.png",
+    "static/media/Chicago_Bulls.png": "/static/media/Chicago_Bulls.1cdf12b14b3132eda158.png",
+    "static/media/Los_Angeles_Clippers.png": "/static/media/Los_Angeles_Clippers.c1b7dccffd8e031ec1f9.png",
+    "static/media/New_York_Knicks.png": "/static/media/New_York_Knicks.345d2e56826bdc2261f3.png",
+    "static/media/Houston_Rockets.png": "/static/media/Houston_Rockets.846b27e277c192e87f78.png",
+    "static/media/Denver_Nuggets.png": "/static/media/Denver_Nuggets.60717bc8e4cfa21d0713.png",
+    "static/media/Memphis_Grizzlies.png": "/static/media/Memphis_Grizzlies.a32984a7486546bb2949.png",
+    "static/media/Indiana_Pacers.png": "/static/media/Indiana_Pacers.af3f354f649521c95c57.png",
+    "static/media/Brooklyn_Nets.png": "/static/media/Brooklyn_Nets.7a3ae3a450f6240a9b47.png",
+    "static/media/Los_Angeles_Lakers.png": "/static/media/Los_Angeles_Lakers.10f319e623828cf14f55.png",
+    "static/media/Miami_Heat.png": "/static/media/Miami_Heat.1c614786ac8cef021942.png",
+    "index.html": "/index.html",
+    "main.b2989ac5.css.map": "/static/css/main.b2989ac5.css.map",
+    "main.88821b1b.js.map": "/static/js/main.88821b1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2989ac5.css",
+    "static/js/main.88821b1b.js"
+  ]
+}
